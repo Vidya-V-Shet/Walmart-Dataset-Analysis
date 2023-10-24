@@ -3,7 +3,8 @@ import ids
 
 
 def render() -> html.Div:
-    all_identifiers = ["Time-Series Sales Comparison: Store Type", "Time-Series Sales with markdowns", "Weekly sales decomposition"]
+    all_identifiers = ["Time-Series Sales Comparison: Store Type", "Time-Series Sales with markdowns", "Weekly sales decomposition", 
+                       "Fuel Price", "CPI", "Temperature", "Unemployment"]
     return html.Div(
         children=[
             html.H5("Choose a plot", style={"color": '#FFAA00'}),

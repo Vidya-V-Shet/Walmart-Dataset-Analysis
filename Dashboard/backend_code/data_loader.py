@@ -12,10 +12,7 @@ def load_data():
     
     df = df.loc[df['Weekly_Sales'] > 0] #outliers
 
-    df['year'] = pd.DatetimeIndex(df['Date']).year #Separating year data.
     df['month'] = pd.DatetimeIndex(df['Date']).month #extract month data
-    week_df = pd.DatetimeIndex(df['Date']).isocalendar()
-    df['week'] = week_df['week'].values
 
     df.drop("_merge", axis=1, inplace=True)
     df['Total_MarkDown'] = df[['MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5']].sum(axis=1)

@@ -1,4 +1,3 @@
-import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -66,6 +65,15 @@ def third_graph(df):
     fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='Gray')
     fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='Gray')
     return fig
+def fourth_graph(df, selector):
+    df_grouped = df.groupby("Date")[selector].mean().reset_index()
+
+    fig = px.line(df_grouped, x="Date", y=selector, title=f"{selector} Over Time", color_discrete_sequence=['#4ECDC4'], markers=True)
+
+    fig.update_layout(autosize=True, template="plotly_dark")
+    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='Gray')
+    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='Gray')
+    return fig
 
 def prepare_visuals_for_dashboard(df, selector: str):
     if selector == "Time-Series Sales Comparison: Store Type":
@@ -74,3 +82,7 @@ def prepare_visuals_for_dashboard(df, selector: str):
         return second_graph(df)
     elif selector == "Weekly sales decomposition":
         return third_graph(df)
+    elif selector == "Fuel Price":
+        return fourth_graph(df, "Fuel_Price")
+    elif  selector in ["CPI", "Unemployment", "Temperature"]:
+        return fourth_graph(df, selector)

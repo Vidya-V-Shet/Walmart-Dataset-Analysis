@@ -13,18 +13,8 @@ def first_graph(df: pd.DataFrame, basis: str = "month"):
         "Temperature": "mean"
     }).reset_index()
 
-    # Calculate the monthly changes using the diff() function
-    aggregated_data['Sales_Change'] = aggregated_data['Weekly_Sales'].diff()
-    aggregated_data['Fuel_Change'] = aggregated_data['Fuel_Price'].diff()
-    aggregated_data['Unemployment_Change'] = aggregated_data['Unemployment'].diff()
-    aggregated_data['CPI_Change'] = aggregated_data['CPI'].diff()
-    aggregated_data['Temperature_Change'] = aggregated_data['Temperature'].diff()
-
-    # Drop the first row since it'll have NaN due to the diff() calculation
-    aggregated_data.dropna(inplace=True)
-
     # Calculate the correlation matrix for the change values
-    correlation_matrix = aggregated_data[['Sales_Change', 'Fuel_Change', 'Unemployment_Change', 'CPI_Change', "Temperature_Change"]].corr("spearman")
+    correlation_matrix = aggregated_data[['Weekly_Sales', 'Fuel_Price', 'Unemployment', 'CPI', "Temperature"]].corr("spearman")
 
     # Create a heatmap to visualize the correlation matrix
     fig = ff.create_annotated_heatmap(
@@ -40,7 +30,7 @@ def first_graph(df: pd.DataFrame, basis: str = "month"):
     elif basis == "Date":
         basis_text = "Weekly"
 
-    fig.update_layout(title=f"Correlation Heatmap of {basis_text} Changes", autosize=True, template="plotly_dark")
+    fig.update_layout(title=f"Correlation Heatmap of {basis_text} Values", autosize=True, template="plotly_dark")
 
     return fig
 

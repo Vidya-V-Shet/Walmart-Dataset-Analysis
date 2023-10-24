@@ -3,9 +3,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from backend_code.constants import DATES, HOLIDAY_MAPPING, IDENTIFIER_MAP
 from typing import Dict
-import statsmodels.api as sm
-import statsmodels.api as sm
-
 
 
 def filter_and_rank_by_avg_sales(df: pd.DataFrame, mask, identifier:str="Dept", n: int=5, func=pd.DataFrame.head, select_type:str="All Types") -> pd.DataFrame:
