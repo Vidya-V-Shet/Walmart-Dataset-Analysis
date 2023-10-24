@@ -8,14 +8,9 @@ Prominent holidays like the Super Bowl, Labour Day, Thanksgiving, and Christmas 
 
 **Acknowledgements:** The dataset originates from [Kaggle](https://www.kaggle.com/).
 
-## 🎯 Objective:
-1. Understand and clean the dataset if needed.
-2. Build Regression models for sales prediction considering single & multiple features.
-3. Evaluate models using metrics like R2, RMSE, etc.
-
 ## 🚀 Project Phases:
 1. EDA and statistical analysis
-2. Time Series Predictive modeling
+2. Time Series Predictive modeling (Future Phase)
 
 
 **Dashboard Sample:** ![Dashboard Image](dashboard_example.png)
