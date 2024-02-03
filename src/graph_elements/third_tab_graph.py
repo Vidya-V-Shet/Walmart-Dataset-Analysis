@@ -1,8 +1,8 @@
-from backend_code.third_tab_code import prepare_visuals_for_dashboard
+from src.backend_code.third_tab_code import prepare_visuals_for_dashboard
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
-import ids
-from backend_code.data_loader import *
+import src.ids as ids
+from src.backend_code.data_loader import *
 
 
 def render(app: Dash) -> html.Div:

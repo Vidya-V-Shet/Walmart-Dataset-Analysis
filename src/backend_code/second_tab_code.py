@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-from backend_code.constants import DATES
+from src.backend_code.constants import DATES
 from typing import Dict
 
 colors = {

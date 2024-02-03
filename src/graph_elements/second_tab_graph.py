@@ -1,8 +1,8 @@
-from backend_code.second_tab_code import prepare_pie_charts_for_dashboard
+from src.backend_code.second_tab_code import prepare_pie_charts_for_dashboard
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
-import ids
-from backend_code.data_loader import *
+import src.ids as ids
+from src.backend_code.data_loader import *
 
 
 def render(app: Dash) -> html.Div:

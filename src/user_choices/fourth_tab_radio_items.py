@@ -1,5 +1,5 @@
 from dash import dcc, html
-import ids
+import src.ids as ids
 
 def render() -> html.Div:
     all_identifiers = ["Correlation Matrix on Weekly basis", "Correlation Matrix on Monthly basis", "External Factors distributions"]

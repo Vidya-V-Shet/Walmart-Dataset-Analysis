@@ -1,16 +1,16 @@
 from dash import Dash, html, dcc
-import graph_elements.first_tab_graph as first_tab_graph
-import graph_elements.second_tab_graph as second_tab_graph
-import graph_elements.third_tab_graph as third_tab_graph
-import graph_elements.fourth_tab_graph as fourth_tab_graph
+import src.graph_elements.first_tab_graph as first_tab_graph
+import src.graph_elements.second_tab_graph as second_tab_graph
+import src.graph_elements.third_tab_graph as third_tab_graph
+import src.graph_elements.fourth_tab_graph as fourth_tab_graph
 
 
-import user_choices.first_tab_dropdown as first_tab_dropdown
+import src.user_choices.first_tab_dropdown as first_tab_dropdown
 
-import user_choices.first_tab_radio_items as first_tab_radio_items
-import user_choices.second_tab_radio_items as second_tab_radio_items
-import user_choices.third_tab_radio_items as third_tab_radio_items
-import user_choices.fourth_tab_radio_items as fourth_tab_radio_items
+import src.user_choices.first_tab_radio_items as first_tab_radio_items
+import src.user_choices.second_tab_radio_items as second_tab_radio_items
+import src.user_choices.third_tab_radio_items as third_tab_radio_items
+import src.user_choices.fourth_tab_radio_items as fourth_tab_radio_items
 
 
 def first_tab(app: Dash) -> html.Div:

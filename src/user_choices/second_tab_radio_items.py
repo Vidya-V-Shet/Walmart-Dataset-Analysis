@@ -1,5 +1,5 @@
 from dash import dcc, html
-import ids
+import src.ids as ids
 
 
 def render() -> html.Div:
