@@ -7,4 +7,5 @@ dash
 dash_bootstrap_components
 scikit-learn
 scipy
+statsmodels
 gunicorn
