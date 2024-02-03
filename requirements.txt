@@ -6,6 +6,5 @@ plotly
 dash
 dash_bootstrap_components
 scikit-learn
-pprint
 scipy
 gunicorn
