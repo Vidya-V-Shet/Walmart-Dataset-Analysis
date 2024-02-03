@@ -3,19 +3,19 @@ import ids
 
 def render() -> html.Div:
     all_identifiers = ["All Types", "A", "B", "C"]
+    
     return html.Div(
         children=[
-            html.H5("Store Type", style={"color": '#FFAA00'}),
+            html.H5("Store Type", id=ids.FIRST_TAB_H5),
             dcc.Dropdown(
-                id=ids.SELECTOR_DROPDONW,
+                id=ids.SELECTOR_DROPDOWN,
                 options=[{
                         "label": html.Span([identifier], style={'color': '#1E88E5', 'font-size': 18}),
                         "value": identifier
                     } for identifier in all_identifiers],
                 value="All Types",
-                style={'width': '180px', 'background-color': '#343a40', 'color': '#1E88E5'},
                 clearable=False,
-                searchable=False
+                searchable=False,
             ),
         ]
     )
