@@ -5,7 +5,7 @@ typing
 plotly
 dash
 dash_bootstrap_components
-sklearn
+scikit-learn
 pprint
 scipy
 gunicorn
