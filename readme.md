@@ -6,7 +6,7 @@
 
 Prominent holidays like the Super Bowl, Labour Day, Thanksgiving, and Christmas affect sales. In the evaluation, holiday weeks are given 5x weightage. Part of this challenge is factoring in the effects of promotional markdown events, especially during these holiday weeks, despite incomplete historical data.
 
-**Acknowledgements:** The dataset originates from [Kaggle](https://www.kaggle.com/).
+**Acknowledgements:** The dataset originates from [Kaggle](https://www.kaggle.com/datasets/yasserh/walmart-dataset).
 
 ## 🚀 Project Phases:
 1. EDA and statistical analysis
